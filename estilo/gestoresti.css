@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #ff99cc, #ffffff);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+}
+
+.sidebar .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar .menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .menu ul li a .icon {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.sidebar .menu ul li a:hover,
+.sidebar .menu ul li a.active {
+    background-color: #ff66b3;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.sidebar .logout a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.sidebar .logout a:hover {
+    background-color: #ff66b3;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+.user-info .user-email {
+    font-size: 14px;
+    color: #333;
+}
+
+.user-info .user-role {
+    font-size: 12px;
+    color: #666;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+}
+
+td a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status.pendiente {
+    background-color: #fff9c4;
+    color: #f57f17;
+}
+
+.status.pagado {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.status.cancelado {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+.no-data {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .sidebar .logo {
+        margin-bottom: 20px;
+    }
+
+    .sidebar .menu ul li a,
+    .sidebar .logout a {
+        padding: 10px 15px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .card {
+        margin-top: 10px;
+    }
+
+    .table-container {
+        overflow-x: scroll;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 13px;
+    }
+
+    .form-group button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

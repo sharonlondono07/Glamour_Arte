@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.login-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.login-card h2 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(238, 110, 200);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-card button:hover {
+    background-color: rgb(235, 86, 188);
+}
+
+.login-card a {
+    display: block;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.login-card a.register-link {
+    color: rgb(245, 72, 193);
+}
+
+.login-card a.register-link:hover {
+    text-decoration: underline;
+}
