@@ -356,10 +356,10 @@ $result = $conn->query($sql);
 </head>
 <body>    
     <nav>
-        <a href="inicio.php">Inicio</a>
+        <a href="index.php">Inicio</a>
         <a href="visualizarservicios.php" class="active">Servicios</a>
         <a href="visualizarestilistas.php">Estilistas</a>
-        <a href="contacto.php">Contacto</a>
+        
     </nav>
     <div class="services">
         <h2>Nuestros Servicios</h2>

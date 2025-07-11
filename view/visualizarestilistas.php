@@ -344,10 +344,10 @@ if (!$result_stylists) {
 </head>
 <body>    
     <nav>
-        <a href="inicio.php">Inicio</a>
+        <a href="index.php">Inicio</a>
         <a href="visualizarservicios.php">Servicios</a>
         <a href="visualizarestilistas.php" class="active">Estilistas</a>
-        <a href="contacto.php">Contacto</a>
+        
     </nav>
     <div class="content">
         <div class="stylists">

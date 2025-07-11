@@ -327,7 +327,147 @@ if (!$stylist) {
                 gap: 20px;
             }
         }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background: linear-gradient(90deg, #ffccd5, #fff0f6);
+            max-width: 1200px;
+            margin: 40px auto 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 10px 10px 0 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-section {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            color: #ff66b3;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.2);
+        }
+
+        .social-media .text-light {
+            color: #25d366; /* Color verde de WhatsApp */
+        }
+
+        .social-media .text-success {
+            color: #25d366; /* Color verde de WhatsApp */
+        }
+
+        .social-media i {
+            font-size: 1.5em;
+        }
+
+        .footer-section a {
+            color: #ff66b3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #e91e63;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background: #fde0f8;
+            color: #666;
+            font-size: 12px;
+            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .copyright a {
+            color: #ff66b3;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .copyright a:hover {
+            color: #e91e63;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1em;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .login-buttons {
+                margin-top: 1em;
+            }
+
+            .login-buttons a {
+                margin: 0 0.5em;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 1em;
+            }
+
+            .content {
+                padding: 1.5em;
+            }
+
+            .stylist-card {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .footer {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .social-media {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .social-media a {
+                margin: 0 5px;
+            }
+        }
     </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-...your-integrity-hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const galleryItems = document.querySelectorAll('.gallery-item');
@@ -356,10 +496,10 @@ if (!$stylist) {
 </head>
 <body>
     <nav>
-        <a href="inicio.php">Inicio</a>
+        <a href="index.php">Inicio</a>
         <a href="visualizarservicios.php">Servicios</a>
         <a href="visualizarestilistas.php">Estilistas</a>
-        <a href="contacto.php">Contacto</a>
+        
     </nav>
     <div class="content">
         <div class="stylist-info">            
@@ -382,19 +522,29 @@ if (!$stylist) {
             ?>
         </div>
     </div>
-    <div class="footer">
-        <div>
+    <footer class="footer">
+        <div class="footer-section">
             <h3>Contacto</h3>
             <p>📍 Calle 24B #45-114 Barrio Santander - Neiva</p>
-            <p>☎ +57 3123979732</p>
-            <p>📧 info@glamouryarte.com</p>
+            <p>📞 +57 3123979732</p>
+            <p>✉️ info@glamouryarte.com</p>
         </div>
-        <div>
+        <div class="footer-section">
             <h3>Síguenos</h3>
-            <p>📷 <a href="https://www.instagram.com/glamour.y.arte?igsh=MTUyNHYxeXVqYmI0Zw==">Instagram</a></p>
-            <p>📱 <a href="https://wa.me/573123979732">WhatsApp</a></p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/glamour.y.arte?igsh=MTUyNHYxeXVqYmI0Zw==" target="_blank" class="text-light">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/573123979732" target="_blank" class="text-success">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
             <p>Horario: Lunes a Sábado 8:00 AM - 9:00 PM</p>
         </div>
+    </footer>
+    <div class="copyright">
+        <p>© 2025 Glamour y Arte. Todos los derechos reservados.</p>
+        <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
     </div>
 
     <!-- Modal -->

@@ -15,9 +15,9 @@
             <span>Glamour y Arte</span>
         </div>
         <ul>
-            <li><a href="inicio">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="visualizarestilistas.php">Estilistas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            
         </ul>
         <div class="auth">
             <a href="login.php">Iniciar Sesión</a>
